@@ -1,1 +1,30 @@
-/* styles go here */
+.text {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.margin {
+  margin: 5px;
+}
+
+.age {
+  font-weight: bold;
+}
+
+.DOB {
+  color: darkgray;
+}
+
+.email {
+  color: darkgrey;
+}
+
+.label {
+  display: block;
+}
+
+.button {
+  margin-top: 30px;
+  margin-left: 5px;
+}
