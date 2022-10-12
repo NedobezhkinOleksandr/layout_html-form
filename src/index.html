@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body class="text" >
-    <h1>HTML Form</h1>
     <script type="text/javascript" src="./main.js"></script>
     <form action="#">
-      <fieldset>
+      <fieldset class="text">
         <legend>Personal information</legend>
         <label class="label">
           Surname:
@@ -36,12 +35,12 @@
         <label class="label">
           How old are You?
           <input 
-            class="age margin" 
+            class="margin" 
             type="number" 
             name="age" 
             value="12"
             min="0"
-            max="99" 
+            max="100" 
             required
           >
         </label>
@@ -49,7 +48,7 @@
         <label class="label">
           Full date of birth:
           <input 
-            class="DOB margin" 
+            class="margin"
             type="date" 
             name="DOB" 
             value="mm/dd/yyyy" 
@@ -60,40 +59,43 @@
         <label class="label">
             I accept the term of the agreement
           <input 
-            class="margin"
             type="checkbox" 
             name="agree" 
           >
         </label>
       </fieldset>
-    </form>
 
-    <form class="text" action="#">
-      <fieldset>
+      <fieldset class="text">
         <legend>Registration</legend>
         <label class="label">
           E-mail:
           <input 
-            class="email margin" 
+            class="margin" 
             type="email" 
-            value="email@example.com" 
+            placeholder="email@example.com" 
           >
         </label>
 
         <label class="label">
           Password:
-          <input class="margin" type="password" >
+          <input type="password" >
         </label>
       </fieldset>
-    </form>
 
-    <form class="text" action="#">
-      <fieldset>
+      <fieldset class="text">
         <legend>An interesting fact about you!</legend>
-        <label class="label">
+        <label class="margin label">
           Do you love cats?
-          <input type="checkbox">Yes
-          <input type="checkbox">No
+          <input 
+            class="cats"
+            type="radio" 
+            name="Agree"
+          >Yes
+          <input
+            class="cats" 
+            type="radio" 
+            name="Disagree"
+          >No
         </label>
 
         <label class="label">
@@ -103,22 +105,31 @@
 
         <label class="label">
           What time do you go to bed?
-          <input class="margin" type="time">
+          <input 
+            class="margin"
+            type="time" 
+            step="2"
+          >
         </label>
 
         <label class="label">
           What are your favorite brand of cars?
-          <select class="margin" name="car">
-            <option value="Lexus">Lexus</option>
-            <option value="BMW">BMW</option>
-            <option value="Audi">Audi</option>
+          <select 
+            class="margin"
+            name="cars" 
+            multiple 
+            size="4"
+          >
+            <option value="BMW" enabled>BMW</option>
+            <option value="Audi" enabled>Audi</option>
+            <option value="Lada" enabled>Lada</option>
+            <option value="Empty" enabled></option>
           </select>
         </label>
 
         <label class="label">
           How do you rate our work?
-          <input 
-            class="margin" 
+          <input  
             type="range" 
             min="1" 
             max="10" 
@@ -126,12 +137,10 @@
           >
         </label>
       </fieldset>
-    </form>
 
-    <form class="text" action="#">
-      <fieldset>
+      <fieldset class="text">
         <legend>Additional info:</legend>
-        <label class="label">
+        <label class="margin label">
           Comments:
           <textarea 
             name="comments" 
@@ -142,13 +151,13 @@
 
         <label class="label">
           Would you recommend us?
-          <select class="margin" name="recommendation">
+          <select name="recommendation">
             <option value="yes">yes</option>
             <option value="no">no</option>
           </select>
         </label>
       </fieldset>
     </form>
-    <button class="button">Submit</button>
+    <button type="submit">Submit</button>
   </body>
 </html>

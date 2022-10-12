@@ -1,23 +1,9 @@
 .text {
-  font-weight: bold;
-  font-size: 18px;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .margin {
-  margin: 5px;
-}
-
-.age {
-  font-weight: bold;
-}
-
-.DOB {
-  color: darkgray;
-}
-
-.email {
-  color: darkgrey;
+  margin-bottom: 10px;
 }
 
 .label {
@@ -25,6 +11,9 @@
 }
 
 .button {
-  margin-top: 30px;
-  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.cats {
+  margin-right: 7px;
 }
