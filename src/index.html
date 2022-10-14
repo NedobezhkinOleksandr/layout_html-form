@@ -12,13 +12,17 @@
   </head>
   <body class="text" >
     <script type="text/javascript" src="./main.js"></script>
-    <form action="#">
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
       <fieldset class="text">
         <legend>Personal information</legend>
         <label class="label">
           Surname:
-          <input class="margin" type="text" 
-            name="surname" required
+          <input 
+            class="margin"
+            type="text"
+            name="surname"
+            required
+            autocomplete="off"
           >
         </label>
 
@@ -29,6 +33,7 @@
             type="text" 
             name="name" 
             required
+            autocomplete="off"
           >
         </label>
 
@@ -39,9 +44,10 @@
             type="number" 
             name="age" 
             value="12"
-            min="0"
+            min="1"
             max="100" 
             required
+            autocomplete="off"
           >
         </label>
 
@@ -50,7 +56,7 @@
           <input 
             class="margin"
             type="date" 
-            name="DOB" 
+            name="dateOfBirth" 
             value="mm/dd/yyyy" 
             required
           >
@@ -60,7 +66,8 @@
             I accept the term of the agreement
           <input 
             type="checkbox" 
-            name="agree" 
+            name="agreement"
+            required 
           >
         </label>
       </fieldset>
@@ -70,15 +77,23 @@
         <label class="label">
           E-mail:
           <input 
+            name="email"
             class="margin" 
             type="email" 
-            placeholder="email@example.com" 
+            placeholder="email@example.com"
+            required 
+            autocomplete="off"
           >
         </label>
 
         <label class="label">
           Password:
-          <input type="password" >
+          <input
+            type="password"
+            name="password"
+            required
+            autocomplete="off"
+          >
         </label>
       </fieldset>
 
@@ -89,18 +104,22 @@
           <input 
             class="cats"
             type="radio" 
-            name="Agree"
+            name="agree"
           >Yes
           <input
             class="cats" 
             type="radio" 
-            name="Disagree"
+            name="disagree"
           >No
         </label>
 
         <label class="label">
           What is your favorite color?
-          <input class="margin" type="color">
+          <input 
+            class="margin"
+            type="color"
+            name="color"
+          >
         </label>
 
         <label class="label">
@@ -109,6 +128,7 @@
             class="margin"
             type="time" 
             step="2"
+            name="time"
           >
         </label>
 
@@ -120,10 +140,10 @@
             multiple 
             size="4"
           >
-            <option value="BMW" enabled>BMW</option>
-            <option value="Audi" enabled>Audi</option>
-            <option value="Lada" enabled>Lada</option>
-            <option value="Empty" enabled></option>
+            <option value="bmw" enabled>BMW</option>
+            <option value="audi" enabled>Audi</option>
+            <option value="lada" enabled>Lada</option>
+            <option value="empty" enabled></option>
           </select>
         </label>
 
@@ -131,9 +151,10 @@
           How do you rate our work?
           <input  
             type="range" 
-            min="1" 
-            max="10" 
+            minlength="1" 
+            maxlength="10" 
             value="0"
+            name="rate"
           >
         </label>
       </fieldset>
@@ -145,7 +166,9 @@
           <textarea 
             name="comments" 
             cols="20" 
-            rows="2">
+            rows="2"
+            autocomplete="off"
+          >
           </textarea>
         </label>
 
@@ -157,7 +180,7 @@
           </select>
         </label>
       </fieldset>
+      <button type="submit">Submit</button>
     </form>
-    <button type="submit">Submit</button>
   </body>
 </html>
