@@ -1,15 +1,11 @@
-.text {
+.body__fieldset {
   margin-bottom: 20px;
 }
 
-.margin {
+.body__fieldset__label__input {
   margin-bottom: 10px;
 }
 
-.label {
+.body__fieldset__label {
   display: block;
-}
-
-.button {
-  margin-top: 10px;
 }
